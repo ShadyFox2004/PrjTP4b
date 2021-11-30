@@ -7,8 +7,8 @@ public class Paquet {
     public String toString() {
         StringBuilder output = new StringBuilder();
 
-        for (int i = 0; i < paquet.size() ; i++) {
-            output.append(paquet.get(i).toString());
+        for (Carte carte : paquet) {
+            output.append(carte.toString());
         }
 
         return output.toString();
@@ -62,7 +62,6 @@ public class Paquet {
      */
     public Carte piger() {
         Carte cartePiger;
-        int derniereCarte = paquet.size() - 1;
         if(estVide())
             return null;
 
