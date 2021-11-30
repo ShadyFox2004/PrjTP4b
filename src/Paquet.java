@@ -5,13 +5,13 @@ public class Paquet {
 
     @Override
     public String toString() {
-        String output = "";
+        StringBuilder output = new StringBuilder();
 
         for (int i = 0; i < paquet.size() ; i++) {
-            output += paquet.get(i).toString();
+            output.append(paquet.get(i).toString());
         }
 
-        return output;
+        return output.toString();
     }
 
     public Paquet(boolean estBrasser) {
