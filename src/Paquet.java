@@ -3,12 +3,24 @@ import java.util.ArrayList;
 public class Paquet {
     private final ArrayList<Carte> paquet = new ArrayList<>();
 
+    @Override
+    public String toString() {
+        String output = "";
+
+        for (int i = 0; i < paquet.size() ; i++) {
+            output += paquet.get(i).toString();
+        }
+
+        return output;
+    }
+
     public Paquet(boolean estBrasser) {
         remplirPaquet();
         if (estBrasser) {
             melanger();
         }
     }
+
 
     /**
      * Retourne le nombre de cartes dans le paquet.
@@ -54,9 +66,8 @@ public class Paquet {
         if(estVide())
             return null;
 
-
-        cartePiger = paquet.get(derniereCarte);
-        paquet.remove(derniereCarte);
+        cartePiger = paquet.get(0);
+        paquet.remove(0);
 
         return cartePiger;
     }
@@ -66,7 +77,7 @@ public class Paquet {
      */
     private void remplirPaquet() {
         for (String couleur : Carte.COULEURS_VALIDES) { //  Pour chaques couleurs.
-            for (int valeur = 1; valeur < 13; valeur++) {  //  Pour chaque valeures.
+            for (int valeur = 1; valeur <= 13; valeur++) {  //  Pour chaque valeures.
                 paquet.add(new Carte(valeur, couleur)); //  Cree une carte.
             }
         }
