@@ -8,7 +8,7 @@ public class Paquet {
         StringBuilder output = new StringBuilder();
 
         for (Carte carte : paquet) {
-            output.append(carte.toString());
+            output.append(carte);
         }
 
         return output.toString();
@@ -41,7 +41,8 @@ public class Paquet {
      */
     private void melanger() {
         for (int carteIndex = 0; carteIndex < paquet.size(); carteIndex++) {
-            permuter(carteIndex, Util.getInt(paquet.size()));
+            Carte carte = prend(Util.getInt(paquet.size()));
+            paquet.add(carte);
         }
     }
 
@@ -61,12 +62,19 @@ public class Paquet {
      * @return la carte piger.
      */
     public Carte piger() {
+        return prend(0);
+    }
+
+    /**
+     * Prend une carte en l'enlevent du paquet
+     */
+    private Carte prend(int position) {
         Carte cartePiger;
         if(estVide())
             return null;
 
-        cartePiger = paquet.get(0);
-        paquet.remove(0);
+        cartePiger = paquet.get(position);
+        paquet.remove(position);
 
         return cartePiger;
     }
@@ -80,5 +88,11 @@ public class Paquet {
                 paquet.add(new Carte(valeur, couleur)); //  Cree une carte.
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Paquet a = new Paquet(true);
+        a.permuter(3,1);
+        System.out.println("a = " + a);
     }
 }
