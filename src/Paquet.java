@@ -1,3 +1,9 @@
+/*
+ *  Antoine-Matis Boudreau
+ *  2139664
+ *  Groupe 02
+ */
+
 import java.util.ArrayList;
 
 public class Paquet {
