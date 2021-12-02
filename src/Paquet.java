@@ -91,7 +91,7 @@ public class Paquet {
     }
 
     public static void main(String[] args) {
-        Paquet a = new Paquet(true);
+        Paquet a = new Paquet(false);
         a.permuter(3,1);
         System.out.println("a = " + a);
     }
