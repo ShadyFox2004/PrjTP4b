@@ -1,10 +1,9 @@
-﻿/*
+﻿import java.security.InvalidParameterException;
+/*
  *  Antoine-Matis Boudreau
  *  2139664
  *  Groupe 02
  */
-
-import java.security.InvalidParameterException;
 
 public class Carte {
     public static final String[] COULEURS_VALIDES = {"pique", "trèfle", "carreau", "coeur"};
