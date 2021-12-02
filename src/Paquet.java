@@ -65,6 +65,7 @@ public class Paquet {
 
     /**
      * Pige une carte dans le paquet et la retire
+     *
      * @return la carte piger.
      */
     public Carte piger() {
@@ -76,7 +77,7 @@ public class Paquet {
      */
     private Carte prend(int position) {
         Carte cartePiger;
-        if(estVide())
+        if (estVide())
             return null;
 
         cartePiger = paquet.get(position);
@@ -98,7 +99,7 @@ public class Paquet {
 
     public static void main(String[] args) {
         Paquet a = new Paquet(false);
-        a.permuter(3,1);
+        a.permuter(3, 1);
         System.out.println("a = " + a);
     }
 }
