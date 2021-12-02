@@ -11,13 +11,11 @@ public class Util {
 
     /**
      * Fourni un nombre aleatoire
-     * @return
      */
 
     public static int getInt(int max) {
         int min = 0;
-        int b = (int)(Math.random()*(max-min)+min);
-        return b;
+        return (int)(Math.random()*(max-min)+min);
     }
 
     public static void main(String[] args) {
