@@ -1,4 +1,4 @@
-﻿import java.security.InvalidParameterException;
+import java.security.InvalidParameterException;
 /*
  *  Antoine-Matis Boudreau
  *  2139664
@@ -6,7 +6,7 @@
  */
 
 public class Carte {
-    public static final String[] COULEURS_VALIDES = {"pique", "trèfle", "carreau", "coeur"};
+    public static final String[] COULEURS_VALIDES = {"pique", "trefle", "carreau", "coeur"};
     public static final char[] COULEURS_CAR = {'\u2660', '\u2663', '\u2666', '\u2764'};
 
     private int couleurIndex;
@@ -66,7 +66,7 @@ public class Carte {
     }
 
     /**
-     * Test si la cauleur est valide
+     * Test si la couleur est valide
      * Une couleur valide est definie dans COULEURS_VALIDES
      *
      * @param couleur a regarder
